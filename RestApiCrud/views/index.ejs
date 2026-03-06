@@ -20,8 +20,12 @@
                 <h2 class="article-title"><%= article.title %></h2>
                 <p class="article-content"> <%= article.content %></p>
                  <button class="read btn btn-info"  onclick="window.location.href='/posts/<%= article.id %>'">Read More</button>
-                <button class="edit btn btn-primary" >Edit Post</button>
-                <button class="delete btn btn-danger" >Delete Post</button>
+                                  <button class="read btn btn-info"  onclick="window.location.href='http://localhost:1111/posts/<%= article.id %>/edit'">Edit</button>
+
+                <!-- <a href="http://localhost:1111/posts/<%=article.id %>/edit">Edit Post</a> -->
+                <form action="http://localhost:1111/posts/<%= article.id %>?_method=DELETE" method="POST">
+                    <button class="delete btn btn-danger" type="submit">Delete Post</button>
+                </form>
             </div>
         <% } %>
     </div>
