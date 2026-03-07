@@ -67,7 +67,6 @@ app.get('/posts/new',(req,res)=>{
 
 app.get('/posts/:id',(req,res)=>{
     let {id} = req.params;
-    console.log(id);
     let article = articles.find((a) => id == a.id);
     res.render('show.ejs',{article});
 });
@@ -85,7 +84,7 @@ app.patch('/posts/:id',(req,res)=>{
 
     let article = articles.find((a) => id === a.id);
     article.content = newContent;
-res.redirect('/posts');
+    res.redirect('/posts');
 });
 app.delete('/posts/:id',(req,res)=>{
     let {id} = req.params;
