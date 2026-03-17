@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+.chat {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px auto;
+    width: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sender {
+    background: #dcf8c6;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.receiver {
+      background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    width: fit-content;
+}
+
+.message{
+    background:#dcf8c6;
+    padding:8px 14px;
+    border-radius:15px;
+    display:inline-block;
+     max-width:60%;
+    margin-top:8px;
+    font-size:14px;
+    position:relative; 
+}
+
+/* chat bubble tail */
+ .message::after{ 
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:-8px;
+    width:0;
+    height:0;
+    border-right:10px solid #dcf8c6;
+    border-top:10px solid transparent;
+} 
+/* Chat container */
+.chat-details {
+    max-width: 500px;
+    margin: auto;
+}
+.sender-show {
+    background: #dcf8c6;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.receiver-show {
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    width: fit-content;
+}
+/* Buttons */
+.btn {
+    margin-right: 10px;
+}
